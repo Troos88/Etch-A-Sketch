@@ -1,0 +1,11 @@
+body
+{
+    background-color: aliceblue;
+}
+
+.board
+{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 0px;
+}
