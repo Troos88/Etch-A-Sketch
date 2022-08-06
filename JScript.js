@@ -1,19 +1,41 @@
-const board = document.querySelector('.board');
+const grid = document.getElementById('grid');
+const sizeButtons = document.querySelectorAll('.size');
 
+let brushSize = 50;
+let color = 'black';
 
-function createBox()
+sizeButtons.forEach(button => {button.addEventListener('click', changeSize);});
+
+function paint()
 {
-    const square = document.createElement('div');
-    square.classList.add('.square');
-    square.style.width = '20px';
-    square.style.height = '20px';
-    square.style.border = '1px solid black';
+    grid.style.gridTemplateColumns = `repeat(${brushSize}, 1fr)`
+    grid.style.gridTemplateRows = `repeat(${brushSize}, 1fr)`
 
+    for(let i = 0; i < brushSize * brushSize; i++)
+    {
+        const element = document.createElement('div');
+        element.classList.add('element');
+        element.addEventListener('mouseover', () => {element.style.backgroundColor = color});
+        
 
-    board.appendChild(square);
+        grid.appendChild(element);
+
+    }
 }
 
-for(let i = 1; i <= 10; i++)
+function clearCanvas()
 {
-    createBox();
+    while(grid.firstChild)
+    {
+        grid.removeChild(grid.firstChild);
+    }
+    paint();
 }
+
+function changeSize(e)
+{
+    brushSize = e.target.id;
+    clearCanvas();
+}
+
+paint();

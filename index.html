@@ -9,7 +9,21 @@
     <script src="JScript.js" defer></script>
 </head>
 <body>
-    <div class="board"></div>
+    <div class="left">
+        <button id="clear" onclick="clearCanvas()">Clear</button>
+    </div>
+<div class="main">
+        <h1>Etch a Sketch</h1>
+        <ul>
+            <li><button class="size" id=10>10x10</button></li>
+            <li><button class="size" id=30>30x30</button></li>
+            <li><button class="size" id=50>50x50</button></li>
+        </ul>
+    <div id="grid" class="grid"></div>
+</div>
+    
+    <div class="right"></div>
+
 </body>
 
 </html>
