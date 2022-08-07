@@ -12,18 +12,24 @@
 <body>
     
 
-    <div class="header"><h1>Etch a Sketch</h1></div>
+    <div class="header">  
+    </div>
+    <div class="light">
+        <h1>Etch a Sketch</h1>
+    </div> 
         <div class="sizemenu">
         <ul>
             <li><button class="size" id=10>10x10</button></li>
             <li><button class="size" id=30>30x30</button></li>
             <li><button class="size" id=50>50x50</button></li>
-        </ul></div>
+        </ul>
+    </div>
     <div class="main">
         <div class="leftmenu">
             <ul>
                 <label for="colorpicker">Pick color</label>
                 <li> <input type="color" id="colorpicker" value="#0000ff"></li>
+                <label for="clear">Clear</label>
                 <li><button id="clear" onclick="clearCanvas()"><i class="bi bi-arrow-counterclockwise fa-lg"></i></button></li>                
             </ul>
         </div>
@@ -38,11 +44,14 @@
             <li><button id="lastcolor" onclick=""></button></li>
             <li><button id="lastcolor" onclick=""></button></li>
             <li><button id="lastcolor" onclick=""></button></li>
+            <li><button id="lastcolor" onclick=""></button></li>
+            <li><button id="lastcolor" onclick=""></button></li>
+            <li><button id="lastcolor" onclick=""></button></li>
         </ul>
-        
     </div>
 </div>
 
+<footer>Tobias Roos</footer>
 </body>
 
 </html>
