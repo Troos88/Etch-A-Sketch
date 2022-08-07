@@ -9,9 +9,9 @@ let currentColorIndex = 1;
 
 sizeButtons.forEach(button => {button.addEventListener('click', changeSize);});
 colorButtons.forEach(button => {button.addEventListener('click', changeColor);});
+colorPicker.addEventListener('change', changeColor);
 colorButtons[0].value = color;
 colorButtons[0].style.backgroundColor = color;
-colorPicker.addEventListener('change', changeColor);
 
 function paint()
 {
@@ -24,7 +24,6 @@ function paint()
         element.classList.add('element');
         element.addEventListener('mouseover', () => {element.style.backgroundColor = color});
         
-
         grid.appendChild(element);
 
     }
