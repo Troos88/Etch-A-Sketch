@@ -6,23 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOP Etch a Sketch</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <script src="JScript.js" defer></script>
 </head>
 <body>
-    <div class="left">
-        <button id="clear" onclick="clearCanvas()">Clear</button>
-    </div>
-<div class="main">
-        <h1>Etch a Sketch</h1>
+    
+
+    <div class="header"><h1>Etch a Sketch</h1></div>
+        <div class="sizemenu">
         <ul>
             <li><button class="size" id=10>10x10</button></li>
             <li><button class="size" id=30>30x30</button></li>
             <li><button class="size" id=50>50x50</button></li>
-        </ul>
+        </ul></div>
+    <div class="main">
+        <div class="leftmenu">
+            <ul>
+                <label for="colorpicker">Pick color</label>
+                <li> <input type="color" id="colorpicker" value="#0000ff"></li>
+                <li><button id="clear" onclick="clearCanvas()"><i class="bi bi-arrow-counterclockwise fa-lg"></i></button></li>                
+            </ul>
+        </div>
+
     <div id="grid" class="grid"></div>
+
+    <div class="rightmenu">
+        <label for="lastcolor">Last used</label>
+        <ul>
+            <li><button id="lastcolor" onclick=""></button></li>
+            <li><button id="lastcolor" onclick=""></button></li>
+            <li><button id="lastcolor" onclick=""></button></li>
+            <li><button id="lastcolor" onclick=""></button></li>
+            <li><button id="lastcolor" onclick=""></button></li>
+        </ul>
+        
+    </div>
 </div>
-    
-    <div class="right"></div>
 
 </body>
 
